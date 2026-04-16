@@ -3,86 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <title>Bazkun</title>
+
   <style>
-    body { font-family: Arial; margin: 0; background: #f5f7fa; }
+    body { font-family: Arial; margin: 0; background: #f4f6f9; }
     header { background: #0a2540; color: white; padding: 80px 20px; text-align: center; }
-    h1 { font-size: 40px; }
-    section { padding: 50px 20px; max-width: 900px; margin: auto; }
-    .btn { background: #0077ff; color: white; padding: 12px 25px; text-decoration: none; margin: 10px; display: inline-block; border-radius: 5px; }
-    .card { background: white; padding: 20px; margin: 15px 0; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-    input, select, textarea { width: 100%; padding: 10px; margin-top: 10px; }
-    button { background: #0077ff; color: white; padding: 12px; border: none; margin-top: 10px; }
-    .lang { position: absolute; top: 20px; right: 20px; }
+    h1 { font-size: 42px; }
+    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+    .btn { background: #0077ff; color: white; padding: 12px 25px; text-decoration: none; display: inline-block; margin-top: 10px; border-radius: 6px; }
+    input, select, textarea { width: 100%; padding: 12px; margin-top: 10px; }
+    button { background: #0077ff; color: white; padding: 12px; border: none; margin-top: 10px; width: 100%; }
   </style>
 </head>
 
 <body>
 
-<div class="lang">
-  <button onclick="setLang('es')">ES</button>
-  <button onclick="setLang('en')">EN</button>
-</div>
-
 <header>
-  <h1 id="title">Conectamos talento internacional</h1>
-  <p id="subtitle">Bolivia → España y País Vasco</p>
-  <a class="btn">Soy empresa</a>
-  <a class="btn">Soy candidato</a>
+  <h1>🌍 Bazkun</h1>
+  <p>Conectamos talento internacional entre Bolivia y España</p>
 </header>
 
 <section>
-  <h2 id="how">Cómo funciona</h2>
-  <div class="card">Identificamos talento cualificado</div>
+  <div class="grid">
+    
+    <div class="card">
+      <h2>Para Empresas</h2>
+      <p>Accede a talento cualificado internacional preparado para integrarse en España.</p>
+    </div>
+
+    <div class="card">
+      <h2>Para Candidatos</h2>
+      <p>Encuentra oportunidades reales en Europa con acompañamiento profesional.</p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Cómo funciona</h2>
+  <div class="card">Identificamos talento en Bolivia</div>
   <div class="card">Preparamos perfiles internacionales</div>
   <div class="card">Conectamos con empresas en España</div>
 </section>
 
 <section>
-  <h2 id="empresa">Para empresas</h2>
-  <div class="card">Accede a talento internacional preparado</div>
-</section>
+  <h2>Formulario de contacto</h2>
 
-<section>
-  <h2 id="candidato">Para candidatos</h2>
-  <div class="card">Encuentra oportunidades reales en Europa</div>
-</section>
+  <!-- IMPORTANTE: pega aquí tu link de Formspree -->
+  <form action="https://formspree.io/f/xxxxabcd" method="POST">
 
-<section>
-  <h2>Formulario</h2>
-  <form>
-    <input type="text" placeholder="Nombre" required>
-    <input type="email" placeholder="Email" required>
-    <select>
-      <option>Candidato</option>
-      <option>Empresa</option>
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="email" name="email" placeholder="Email" required>
+
+    <select name="tipo">
+      <option value="candidato">Candidato</option>
+      <option value="empresa">Empresa</option>
     </select>
-    <textarea placeholder="Mensaje"></textarea>
+
+    <textarea name="mensaje" placeholder="Cuéntanos más"></textarea>
+
     <button type="submit">Enviar</button>
+
   </form>
-</section>
 
-<section>
-  <h2>🌎 Nuestro enfoque</h2>
-  <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216" width="100%">
 </section>
-
-<script>
-function setLang(lang) {
-  if(lang === 'en'){
-    document.getElementById('title').innerText = "Connecting international talent";
-    document.getElementById('subtitle').innerText = "Bolivia → Spain & Basque Country";
-    document.getElementById('how').innerText = "How it works";
-    document.getElementById('empresa').innerText = "For companies";
-    document.getElementById('candidato').innerText = "For candidates";
-  } else {
-    document.getElementById('title').innerText = "Conectamos talento internacional";
-    document.getElementById('subtitle').innerText = "Bolivia → España y País Vasco";
-    document.getElementById('how').innerText = "Cómo funciona";
-    document.getElementById('empresa').innerText = "Para empresas";
-    document.getElementById('candidato').innerText = "Para candidatos";
-  }
-}
-</script>
 
 </body>
 </html>
