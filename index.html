@@ -1,109 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Bazkun</title>
+<meta charset="UTF-8">
+<title>Bazkun</title>
 
-  <style>
-    body { margin: 0; font-family: Arial; background: #f4f6f9; }
-    header {
-      background: linear-gradient(rgba(10,37,64,0.8), rgba(10,37,64,0.8)),
-      url('https://images.unsplash.com/photo-1521791136064-7986c2920216');
-      background-size: cover;
-      color: white;
-      padding: 100px 20px;
-      text-align: center;
-    }
-    h1 { font-size: 42px; }
-    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-    .btn {
-      background: #0077ff;
-      color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 6px;
-      display: inline-block;
-      margin-top: 15px;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background: #0077ff;
-      color: white;
-      padding: 12px;
-      border: none;
-      margin-top: 10px;
-      width: 100%;
-      border-radius: 5px;
-    }
-  </style>
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+  color: #1a1a1a;
+}
+
+header {
+  background: linear-gradient(135deg, #0a2540, #0077ff);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+.btn {
+  background: white;
+  color: #0077ff;
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+button {
+  background: #0077ff;
+  color: white;
+  padding: 12px;
+  border: none;
+  margin-top: 15px;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: bold;
+}
+</style>
+
 </head>
 
 <body>
 
 <header>
-  <h1>🌍 Bazkun</h1>
-  <p>Conectamos talento latinoamericano con oportunidades en España y el País Vasco</p>
-  <a class="btn">Soy empresa</a>
-  <a class="btn">Soy candidato</a>
+  <h1>Bazkun</h1>
+  <p>Conectando talento latinoamericano con oportunidades en España</p>
+  <a class="btn">Empresas</a>
+  <a class="btn">Candidatos</a>
 </header>
 
-<section>
+<div class="section">
   <div class="grid">
     <div class="card">
       <h2>Para empresas</h2>
-      <p>Accede a talento internacional cualificado, preparado y acompañado en todo el proceso.</p>
+      <p>Accede a talento cualificado internacional listo para integrarse en tu organización.</p>
     </div>
 
     <div class="card">
       <h2>Para candidatos</h2>
-      <p>Encuentra oportunidades reales en Europa con orientación profesional y acompañamiento.</p>
+      <p>Accede a oportunidades laborales en España con acompañamiento profesional.</p>
     </div>
   </div>
-</section>
+</div>
 
-<section>
+<div class="section">
   <h2>¿Quiénes somos?</h2>
   <p>
-    Bazkun es una iniciativa enfocada en conectar talento latinoamericano con oportunidades laborales en España,
-    especialmente en el País Vasco. Nacemos con la visión de crear puentes reales entre profesionales cualificados
-    y empresas que necesitan talento.
+    Bazkun nace para conectar talento latinoamericano con empresas en España.
+    Creamos un puente real entre profesionales cualificados y oportunidades internacionales.
   </p>
-</section>
+</div>
 
-<section>
+<div class="section">
   <h2>Nuestro objetivo</h2>
   <p>
-    Facilitar la movilidad internacional del talento, ayudando tanto a empresas a cubrir necesidades reales
-    como a profesionales a desarrollar su carrera en un entorno internacional.
+    Facilitar la movilidad internacional del talento, generando impacto tanto en empresas como en profesionales.
   </p>
-</section>
+</div>
 
-<section>
+<div class="section">
   <h2>Cómo funciona</h2>
-  <div class="card">Identificamos talento en Latinoamérica</div>
-  <div class="card">Preparamos perfiles profesionales</div>
-  <div class="card">Conectamos con empresas en España</div>
-</section>
+  <div class="grid">
+    <div class="card">Identificación de talento</div>
+    <div class="card">Preparación profesional</div>
+    <div class="card">Conexión con empresas</div>
+  </div>
+</div>
 
-<section>
-  <h2>🌎 Talento internacional</h2>
-  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" width="100%" style="border-radius:10px;">
-</section>
+<div class="section">
+  <img class="hero-image" src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
+</div>
 
-<section>
+<div class="section">
   <h2>Contacto</h2>
 
   <form action="https://formspree.io/f/xxxxabcd" method="POST">
@@ -119,8 +170,7 @@
 
     <button type="submit">Enviar</button>
   </form>
-
-</section>
+</div>
 
 </body>
 </html>
