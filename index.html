@@ -1,164 +1,94 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bazkun</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <style>
-
-/* RESET */
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #111;
   background: #ffffff;
-  color: #111;
 }
 
-/* NAVBAR */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(255,255,255,0.8);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-}
-
-.navbar h2 {
-  margin: 0;
-}
-
-.navbar a {
-  text-decoration: none;
-  margin-left: 20px;
-  color: #111;
-  font-weight: 500;
-}
-
-/* HERO */
 .hero {
-  background: radial-gradient(circle at 30% 30%, #1a3cff, #0a2540);
+  background: linear-gradient(120deg, #0a2540, #0055ff);
   color: white;
-  padding: 180px 20px 120px;
+  padding: 120px 20px;
   text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 50%;
-  top: -200px;
-  right: -200px;
-  filter: blur(80px);
 }
 
 .hero h1 {
-  font-size: 52px;
-  max-width: 900px;
-  margin: auto;
+  font-size: 54px;
+  margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 20px;
-  max-width: 700px;
-  margin: 20px auto;
-  opacity: 0.9;
-}
-
-.buttons {
-  margin-top: 30px;
+  max-width: 750px;
+  margin: auto;
 }
 
 .btn {
-  padding: 14px 30px;
-  border-radius: 999px;
+  margin-top: 30px;
+  padding: 14px 28px;
+  border-radius: 30px;
   text-decoration: none;
-  margin: 10px;
   display: inline-block;
-  font-weight: 600;
-  transition: 0.3s;
+  font-weight: bold;
 }
 
 .btn-primary {
   background: white;
   color: #0055ff;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-.btn-primary:hover {
-  transform: translateY(-3px);
-}
-
-.btn-secondary {
-  border: 1px solid rgba(255,255,255,0.6);
-  color: white;
-}
-
-/* SECTIONS */
 .section {
-  padding: 120px 20px;
+  padding: 90px 20px;
   max-width: 1100px;
   margin: auto;
 }
 
-.section h2 {
-  font-size: 36px;
+h2 {
+  font-size: 32px;
   margin-bottom: 20px;
-  text-align: center;
 }
 
-/* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 
-/* CARDS */
 .card {
-  background: white;
-  padding: 30px;
-  border-radius: 18px;
-  transition: 0.3s;
-  border: 1px solid #eee;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-}
-
-/* IMAGE */
-.image {
-  width: 100%;
-  border-radius: 20px;
-  margin-top: 40px;
-}
-
-/* FORM */
-form {
   background: #f7f9fc;
   padding: 30px;
   border-radius: 15px;
 }
 
+.highlight {
+  background: #0055ff;
+  color: white;
+  padding: 50px;
+  border-radius: 15px;
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+.contact {
+  background: #f7f9fc;
+  padding: 40px;
+  border-radius: 15px;
+}
+
 input, select, textarea {
   width: 100%;
-  padding: 14px;
+  padding: 12px;
   margin-top: 10px;
   border-radius: 8px;
   border: 1px solid #ddd;
@@ -173,130 +103,107 @@ button {
   border-radius: 8px;
   width: 100%;
   font-weight: bold;
-  cursor: pointer;
 }
 
-button:hover {
-  opacity: 0.9;
-}
-
-/* FOOTER */
-.footer {
+footer {
   text-align: center;
   padding: 40px;
-  font-size: 14px;
-  color: #666;
+  background: #0a2540;
+  color: white;
 }
-
 </style>
 
 </head>
 
 <body>
 
-<div class="navbar">
-  <h2>Bazkun</h2>
-  <div>
-    <a href="#">Inicio</a>
-    <a href="#">Servicios</a>
-    <a href="#">Contacto</a>
-  </div>
-</div>
-
 <div class="hero">
   <h1>Conectamos talento internacional con oportunidades reales</h1>
   <p>
-    Bazkun conecta profesionales cualificados de Latinoamérica con empresas en España y el País Vasco.
+    En Bazkun ayudamos a empresas en España a acceder a talento cualificado de Latinoamérica,
+    y acompañamos a profesionales en su camino hacia oportunidades internacionales.
   </p>
-
-  <div class="buttons">
-    <a class="btn btn-primary">Soy empresa</a>
-    <a class="btn btn-secondary">Soy candidato</a>
-  </div>
+  <a class="btn btn-primary">Contactar</a>
 </div>
 
 <div class="section">
-  <h2>Por qué Bazkun</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Talento validado</h3>
-      <p>Filtramos y evaluamos cada perfil antes de conectarlo contigo.</p>
-    </div>
-
-```
-<div class="card">
-  <h3>Proceso acompañado</h3>
-  <p>Te guiamos durante todo el proceso de selección e incorporación.</p>
-</div>
-
-<div class="card">
-  <h3>Enfoque internacional</h3>
-  <p>Conectamos Latinoamérica con Europa de forma eficiente.</p>
-</div>
-```
-
-  </div>
-</div>
-
-<div class="section">
-  <div class="grid">
-    <div class="card">
-      <h2>Para empresas</h2>
-      <p>
-        Accede a talento internacional cualificado, evaluado y preparado para integrarse en tu organización.
-      </p>
-    </div>
-
-```
-<div class="card">
-  <h2>Para candidatos</h2>
+  <h2>¿Qué hacemos?</h2>
   <p>
-    Accede a oportunidades reales en Europa con acompañamiento profesional.
+    Actuamos como puente entre empresas con necesidad de talento y profesionales preparados
+    para dar el salto internacional. Gestionamos, filtramos y acompañamos todo el proceso.
   </p>
 </div>
-```
 
+<div class="section grid">
+  <div class="card">
+    <h2>Para empresas</h2>
+    <p>
+      Identificamos talento cualificado, reducimos tiempos de selección y facilitamos
+      la incorporación de perfiles internacionales preparados.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Para candidatos</h2>
+    <p>
+      Ofrecemos oportunidades reales en España, con orientación y acompañamiento en cada etapa.
+    </p>
   </div>
 </div>
 
 <div class="section">
-  <h2>Cómo funciona</h2>
+  <h2>Cómo trabajamos</h2>
   <div class="grid">
-    <div class="card">Identificación de talento cualificado</div>
-    <div class="card">Validación y preparación</div>
-    <div class="card">Conexión con empresas</div>
+    <div class="card">Identificación de talento en Latinoamérica</div>
+    <div class="card">Evaluación y preparación profesional</div>
+    <div class="card">Conexión directa con empresas</div>
   </div>
 </div>
 
+<div class="section highlight">
+  <h2>Nuestro objetivo</h2>
+  <p>
+    Resolver la escasez de talento en Europa y generar oportunidades reales para profesionales
+    latinoamericanos cualificados.
+  </p>
+</div>
+
 <div class="section">
-  <img class="image" src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
+  <h2>Equipo y visión</h2>
+  <p>
+    Bazkun nace con una visión clara: crear un ecosistema donde el talento no tenga fronteras
+    y las empresas puedan crecer con los mejores perfiles disponibles.
+  </p>
+
+  <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
 </div>
 
 <div class="section">
   <h2>Contacto</h2>
 
-  <form action="https://formspree.io/f/xxxxabcd" method="POST">
-    <input type="text" name="nombre" placeholder="Nombre" required>
-    <input type="email" name="email" placeholder="Email" required>
+  <div class="contact">
+    <p><strong>Email:</strong> proyectos@bazkun.com</p>
+    <p><strong>Teléfono:</strong> +34 648529094</p>
 
-```
-<select name="tipo">
-  <option value="candidato">Candidato</option>
-  <option value="empresa">Empresa</option>
-</select>
+    <form action="https://formspree.io/f/xxxxabcd" method="POST">
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Email" required>
 
-<textarea name="mensaje" placeholder="Cuéntanos más"></textarea>
+      <select name="tipo">
+        <option value="candidato">Candidato</option>
+        <option value="empresa">Empresa</option>
+      </select>
 
-<button type="submit">Enviar</button>
-```
+      <textarea name="mensaje" placeholder="Cuéntanos más"></textarea>
 
-  </form>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
 </div>
 
-<div class="footer">
-  © 2026 Bazkun — Todos los derechos reservados
-</div>
+<footer>
+  <p>© Bazkun 2026 - Conectando talento internacional</p>
+</footer>
 
 </body>
 </html>
