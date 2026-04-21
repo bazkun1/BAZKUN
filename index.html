@@ -1,26 +1,29 @@
-import { useState } from "react";
-import { Mail, Phone, Globe } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 export default function LandingPage() {
   return (
-    <div className="font-sans text-gray-800">
+    <div className="min-h-screen font-sans text-gray-800">
       {/* HERO */}
-      <section className="relative bg-black text-white">
+      <section className="relative min-h-screen flex items-center justify-center">
         <img
           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
           alt="Trabajadores internacionales"
-          className="w-full h-[70vh] object-cover opacity-60"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
-          <h1 className="text-4xl md:text-5xl font-bold max-w-3xl">
+        <div className="absolute inset-0 bg-black/60" />
+
+        <div className="relative z-10 text-center px-6 max-w-4xl">
+          <h1 className="text-3xl md:text-5xl font-bold text-white">
             Conectamos talento internacional con empresas en Europa
           </h1>
-          <p className="mt-4 text-lg max-w-2xl">
+
+          <p className="mt-4 text-lg text-gray-200">
             Reclutamiento, selección y acompañamiento legal integral end-to-end
           </p>
+
           <a
             href="#contacto"
-            className="mt-6 bg-white text-black px-6 py-3 rounded-full font-semibold"
+            className="mt-8 inline-block bg-white text-black px-6 py-3 rounded-full font-semibold"
           >
             Contactar ahora
           </a>
@@ -28,20 +31,21 @@ export default function LandingPage() {
       </section>
 
       {/* ABOUT */}
-      <section className="p-10 max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">¿Quiénes somos?</h2>
-        <p className="text-gray-600">
+      <section className="py-20 px-6 max-w-5xl mx-auto">
+        <h2 className="text-3xl font-bold mb-6">¿Quiénes somos?</h2>
+        <p className="text-gray-600 leading-relaxed">
           Somos una empresa especializada en procesos de reclutamiento,
           selección y acompañamiento legal integral de personal técnico y
-          cualificado internacional. Contamos además con un equipo jurídico
-          especializado en extranjería.
+          cualificado internacional. Contamos con un equipo jurídico
+          especializado en extranjería para garantizar todo el proceso migratorio
+          y laboral.
         </p>
       </section>
 
       {/* SERVICES */}
-      <section className="bg-gray-100 p-10">
+      <section className="bg-gray-100 py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8">Servicios</h2>
+          <h2 className="text-3xl font-bold mb-10 text-center">Servicios</h2>
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-xl shadow">
@@ -54,7 +58,7 @@ export default function LandingPage() {
             <div className="bg-white p-6 rounded-xl shadow">
               <h3 className="font-semibold text-xl">Gestión legal</h3>
               <p className="text-gray-600 mt-2">
-                Tramitación completa de extranjería y permisos laborales.
+                Tramitación completa de permisos de trabajo y extranjería.
               </p>
             </div>
 
@@ -69,44 +73,44 @@ export default function LandingPage() {
       </section>
 
       {/* IMAGE SECTION */}
-      <section className="p-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-6 items-center">
+      <section className="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         <img
           src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0"
-          alt="Trabajadores en obra"
-          className="rounded-xl"
+          alt="Trabajadores"
+          className="rounded-xl w-full h-full object-cover"
         />
+
         <div>
           <h2 className="text-3xl font-bold mb-4">
-            Talento latinoamericano y europeo preparado para trabajar
+            Talento internacional preparado para trabajar
           </h2>
-          <p className="text-gray-600">
-            Facilitamos la conexión entre empresas y profesionales
-            internacionales cualificados, especialmente en sectores con alta
-            demanda de personal.
+          <p className="text-gray-600 leading-relaxed">
+            Conectamos empresas europeas con profesionales cualificados de todo
+            el mundo, especialmente en sectores con alta demanda de personal.
           </p>
         </div>
       </section>
 
       {/* CONTACT */}
-      <section id="contacto" className="bg-black text-white p-10">
+      <section id="contacto" className="bg-black text-white py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Contacto</h2>
 
           <div className="flex flex-col md:flex-row justify-center gap-6">
-            <div className="flex items-center gap-2">
-              <Mail />
+            <div className="flex items-center gap-2 justify-center">
+              <Mail size={18} />
               <span>proyectos@bazkun.com</span>
             </div>
 
-            <div className="flex items-center gap-2">
-              <Phone />
+            <div className="flex items-center gap-2 justify-center">
+              <Phone size={18} />
               <span>+34 648 529 094</span>
             </div>
           </div>
 
           <p className="mt-6 text-gray-300">
-            Hablemos sobre cómo podemos ayudarte a incorporar talento
-            internacional a tu empresa.
+            Escríbenos y te ayudamos a incorporar talento internacional en tu
+            empresa.
           </p>
         </div>
       </section>
