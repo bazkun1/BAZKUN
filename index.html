@@ -1,211 +1,115 @@
-<!DOCTYPE html>
+import { useState } from "react";
+import { Mail, Phone, Globe } from "lucide-react";
 
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bazkun</title>
+export default function LandingPage() {
+  return (
+    <div className="font-sans text-gray-800">
+      {/* HERO */}
+      <section className="relative bg-black text-white">
+        <img
+          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+          alt="Trabajadores internacionales"
+          className="w-full h-[70vh] object-cover opacity-60"
+        />
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
+          <h1 className="text-4xl md:text-5xl font-bold max-w-3xl">
+            Conectamos talento internacional con empresas en Europa
+          </h1>
+          <p className="mt-4 text-lg max-w-2xl">
+            Reclutamiento, selección y acompañamiento legal integral end-to-end
+          </p>
+          <a
+            href="#contacto"
+            className="mt-6 bg-white text-black px-6 py-3 rounded-full font-semibold"
+          >
+            Contactar ahora
+          </a>
+        </div>
+      </section>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+      {/* ABOUT */}
+      <section className="p-10 max-w-5xl mx-auto">
+        <h2 className="text-3xl font-bold mb-4">¿Quiénes somos?</h2>
+        <p className="text-gray-600">
+          Somos una empresa especializada en procesos de reclutamiento,
+          selección y acompañamiento legal integral de personal técnico y
+          cualificado internacional. Contamos además con un equipo jurídico
+          especializado en extranjería.
+        </p>
+      </section>
 
-<style>
+      {/* SERVICES */}
+      <section className="bg-gray-100 p-10">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8">Servicios</h2>
 
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #ffffff;
-  color: #111;
-}
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-xl shadow">
+              <h3 className="font-semibold text-xl">Reclutamiento</h3>
+              <p className="text-gray-600 mt-2">
+                Selección de perfiles técnicos y cualificados internacionales.
+              </p>
+            </div>
 
-/* NAV */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-  border-bottom: 1px solid #eee;
-}
+            <div className="bg-white p-6 rounded-xl shadow">
+              <h3 className="font-semibold text-xl">Gestión legal</h3>
+              <p className="text-gray-600 mt-2">
+                Tramitación completa de extranjería y permisos laborales.
+              </p>
+            </div>
 
-.nav h2 {
-  margin: 0;
-}
+            <div className="bg-white p-6 rounded-xl shadow">
+              <h3 className="font-semibold text-xl">Acompañamiento</h3>
+              <p className="text-gray-600 mt-2">
+                Seguimiento hasta la incorporación en la empresa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-.nav a {
-  text-decoration: none;
-  margin-left: 20px;
-  color: #555;
-}
+      {/* IMAGE SECTION */}
+      <section className="p-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-6 items-center">
+        <img
+          src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0"
+          alt="Trabajadores en obra"
+          className="rounded-xl"
+        />
+        <div>
+          <h2 className="text-3xl font-bold mb-4">
+            Talento latinoamericano y europeo preparado para trabajar
+          </h2>
+          <p className="text-gray-600">
+            Facilitamos la conexión entre empresas y profesionales
+            internacionales cualificados, especialmente en sectores con alta
+            demanda de personal.
+          </p>
+        </div>
+      </section>
 
-/* HERO */
-.hero {
-  padding: 100px 20px;
-  text-align: center;
-}
+      {/* CONTACT */}
+      <section id="contacto" className="bg-black text-white p-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Contacto</h2>
 
-.hero h1 {
-  font-size: 42px;
-  max-width: 700px;
-  margin: auto;
-}
+          <div className="flex flex-col md:flex-row justify-center gap-6">
+            <div className="flex items-center gap-2">
+              <Mail />
+              <span>proyectos@bazkun.com</span>
+            </div>
 
-.hero p {
-  margin-top: 20px;
-  color: #666;
-  font-size: 18px;
-}
+            <div className="flex items-center gap-2">
+              <Phone />
+              <span>+34 648 529 094</span>
+            </div>
+          </div>
 
-.buttons {
-  margin-top: 30px;
-}
-
-.btn {
-  padding: 12px 26px;
-  border-radius: 8px;
-  text-decoration: none;
-  margin: 10px;
-  display: inline-block;
-  font-weight: 600;
-}
-
-.btn-primary {
-  background: #0055ff;
-  color: white;
-}
-
-.btn-secondary {
-  border: 1px solid #ccc;
-  color: #111;
-}
-
-/* SECTION */
-.section {
-  padding: 80px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-/* CARD */
-.card {
-  padding: 25px;
-  border-radius: 10px;
-  border: 1px solid #eee;
-}
-
-/* IMAGE */
-img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* FORM */
-form {
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 15px;
-  background: #0055ff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="nav">
-  <h2>Bazkun</h2>
-  <div>
-    <a href="#">Inicio</a>
-    <a href="#">Servicios</a>
-    <a href="#">Contacto</a>
-  </div>
-</div>
-
-<div class="hero">
-  <h1>Conectamos talento internacional con empresas en España</h1>
-  <p>Ayudamos a profesionales de Latinoamérica a acceder a oportunidades reales en Europa.</p>
-
-  <div class="buttons">
-    <a class="btn btn-primary">Soy empresa</a>
-    <a class="btn btn-secondary">Soy candidato</a>
-  </div>
-</div>
-
-<div class="section">
-  <h2>Qué hacemos</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Para empresas</h3>
-      <p>Accede a talento cualificado y validado listo para incorporarse.</p>
+          <p className="mt-6 text-gray-300">
+            Hablemos sobre cómo podemos ayudarte a incorporar talento
+            internacional a tu empresa.
+          </p>
+        </div>
+      </section>
     </div>
-    <div class="card">
-      <h3>Para candidatos</h3>
-      <p>Encuentra oportunidades reales con acompañamiento profesional.</p>
-    </div>
-  </div>
-</div>
-
-<div class="section">
-  <h2>Cómo funciona</h2>
-  <div class="grid">
-    <div class="card">Seleccionamos talento</div>
-    <div class="card">Validamos perfiles</div>
-    <div class="card">Conectamos con empresas</div>
-    <div class="card">Acompañamos el proceso</div>
-  </div>
-</div>
-
-<div class="section">
-  <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
-</div>
-
-<div class="section">
-  <h2>Contacto</h2>
-
-  <form action="https://formspree.io/f/xxxxabcd" method="POST">
-    <input type="text" placeholder="Nombre" required>
-    <input type="email" placeholder="Email" required>
-
-```
-<select>
-  <option>Candidato</option>
-  <option>Empresa</option>
-</select>
-
-<textarea placeholder="Mensaje"></textarea>
-
-<button>Enviar</button>
-```
-
-  </form>
-</div>
-
-</body>
-</html>
+  );
+}
